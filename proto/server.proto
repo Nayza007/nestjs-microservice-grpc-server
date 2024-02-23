@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package server;
+
+service CreateProductService {
+  rpc createProduct (Data) returns (ResponseProductResult) {}
+}
+
+message Data {
+  string name = 1;
+  string id = 2;
+  int32 price = 3;
+  int32 amount = 4;
+}
+
+message ResponseProductResult {
+   string status = 1;
+   string result = 2;
+
+}
