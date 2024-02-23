@@ -8,16 +8,7 @@ import { join } from 'path';
 
 console.log(process.cwd())
 @Module({
-  imports: [ ClientsModule.register([
-    {
-      name: 'server',
-      transport: Transport.GRPC,
-      options: {
-        package: 'server', // ตรงกับชื่อ package ในไฟล์ .proto
-        protoPath: join(__dirname , '../../proto/server.proto')
-      }
-    }
-  ])],
+  imports: [],
   controllers: [AppController],
   providers: [AppService],
 })
